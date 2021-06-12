@@ -1,0 +1,96 @@
+.modal {
+    display: none;
+
+    &__form {
+        background-color: var(--white-color);
+        font-family: PT Mono, sans-serif;
+        font-weight: 400;
+        max-width: 500px;
+        position: relative;
+        z-index: 99;
+        padding: 50px clamp(40px, calc(2.5rem + ((1vw - 3.2px) * 3.5714)), 80px);
+        font-size: 1rem;
+        font-size: clamp(14px, calc(0.875rem + ((1vw - 3.2px) * 0.1786)), 16px);
+    }
+
+    &__title {
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    &__close {
+        position: absolute;
+        display: block;
+        right: 30px;
+        top: 25px;
+    }
+    &__close::after {
+        right: -1rem;
+        top: -1rem;
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        border-radius: 50%;
+        color: white;
+        content: "×";
+        cursor: pointer;
+    }
+
+    &__overlay {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.7);
+        content: "";
+        cursor: default;
+        z-index: 98;
+    }
+
+    &__input {
+        font-family: PT Mono, sans-serif;
+        font-weight: 400;
+        font-size: toRem(14);
+        font-size: clamp(toRem(13), toRem(14), toRem(15));
+        color: black;
+        padding: 7px;
+        border: 1px solid;
+    }
+
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+    }
+    &__fieldset > .modal__input {
+        margin-bottom: 15px;
+    }
+
+    &__submit-btn {
+        border: 1px solid;
+        cursor: pointer;
+        transition: background-color var(--normal-transition),
+            color var(--normal-transition);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    &__submit-btn:hover,
+    &__submit-btn:active,
+    &__submit-btn:focus {
+        background-color: var(--blue-color--dark);
+        color: var(--white-color);
+    }
+}
+.modal:target {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

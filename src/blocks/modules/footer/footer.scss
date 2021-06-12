@@ -1,0 +1,62 @@
+.footer {
+    margin-top: 100px;
+    padding: 34px 0;
+    background: radial-gradient(
+            circle at 0% 38%,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(205, 220, 57, 0) 0%,
+            rgba(255, 227, 82, 1) 25%,
+            rgba(255, 227, 82, 1) 50%,
+            rgba(255, 227, 82, 1) 75%,
+            rgba(255, 227, 82, 1) 100%
+        ),
+        url(../img/sprite/sprite.svg#footer-logo) no-repeat -50px/260px;
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        @include media-custom-max(1140px) {
+            flex-direction: column;
+        }
+    }
+
+    p {
+        font-weight: 500;
+        font-size: toRem(30);
+        font-size: clamp(24px, calc(1.5rem + ((1vw - 3.2px) * 0.5357)), 30px);
+        min-height: 0vw;
+        color: var(--orange-color);
+        text-transform: uppercase;
+    }
+    h3 {
+        font-weight: 400;
+        font-size: toRem(22);
+        font-size: clamp(18px, calc(1.125rem + ((1vw - 3.2px) * 0.3571)), 22px);
+        min-height: 0vw;
+        text-align: center;
+
+        @include media-custom-max(1140px) {
+            margin-bottom: 25px;
+        }
+
+        span {
+            font-weight: 500;
+        }
+    }
+}
+.request-btn {
+    font-weight: 600;
+    font-size: toRem(20);
+    font-size: clamp(16px, calc(1rem + ((1vw - 3.2px) * 0.3571)), 20px);
+    min-height: 0vw;
+    line-height: 28px;
+    color: var(--white-color);
+    background-color: var(--orange-color);
+    box-shadow: 0px 4px 24px rgba(162, 54, 51, 0.25);
+    border-radius: 15px;
+    text-decoration: none;
+    padding: 12px 28px;
+    filter: drop-shadow(0px 6px 14px rgba(172, 55, 52, 0.15));
+}

@@ -1,0 +1,71 @@
+extends layouts/default
+include helpers/mixins
+
+block variables 
+    - const title = "index page"
+
+block content
+    main.main
+        section.cta
+            .container.container--main
+                .logo__row
+                    img.comp-logo(src="img/sprite/sprite.svg#logo_rebrain", alt="alt" width="215" loading="lazy" decoding="async")
+                    img.prod-logo(src="img/sprite/sprite.svg#python-logo", alt="alt" width="213" loading="lazy" decoding="async")
+                h1.cta__title Онлайн-тренажер Python by REBRAIN За 7 дней узнайте все о Python
+                .adv__row
+                    .adv__left-part
+                        nav.adv__nav
+                            ul.adv__list
+                                li.adv__item.adv__item-1 15 заданий
+                                li.adv__item.adv__item-2 14 обзорных видео по задачам
+                                li.adv__item.adv__item-3 Best Practices
+                                li.adv__item.adv__item-4 Автопроверки + проверка инженерами
+                                li.adv__item.adv__item-5 Чат с авторами и кураторами
+                        a(href="#callback-modal").callback-btn Сообщить о выходе программы
+                    .adv__right-part
+                        picture
+                             <source type="image/webp" srcset="img/adv-img.webp">
+                             img.adv__img(src="img/adv-img.jpg", width="530" alt="alt" loading="lazy" decoding="async")
+        section.program
+          .container.container--main  
+            .program__top
+                h2.program__title Программа Prometheus by REBRAIN охватывает все основные аспекты работы с Python
+                p В данном практикуме мы дадим основы Python для тех, кто ранее не был знаком с данным языком или был знаком очень поверхностно. 
+                p Вы научитесь основам синтаксиса, которые можно будет потом использовать для применения в любой области и напишем клиент-серверное приложение, с клиентской частью , которая будет снимать параметры сервера и отправлять по REST  API на web-form для мониторинга
+            .program__bottom
+                    h4 Программа:
+                    nav.program__nav
+                        ol.program__list
+                            li.program__item  1.Основы Python
+                                +program__sub-list('list-1')
+                            li.program__item 2.Базовые типы данных Python. часть 1
+                                +program__sub-list('list-2')
+                            li.program__item 3.Базовые типы данных Python. часть 2
+                                +program__sub-list('list-3')
+                            li.program__item 4.Способы ветвления программы Python
+                                +program__sub-list('list-4')
+                            li.program__item 5.Циклы Python
+                                +program__sub-list('list-5')
+                            li.program__item 6.Работа с файлами
+                                +program__sub-list('list-6')
+                            li.program__item 7.Функции часть 1
+                                +program__sub-list('list-7')
+                            li.program__item 8.Функции часть 2
+                                +program__sub-list('list-8')
+                            li.program__item 9.Введение в модули
+                                +program__sub-list('list-9')
+                            li.program__item 10.Модули. os, sys, requests
+                                +program__sub-list('list-10')
+                            li.program__item 11.Основы ООП
+                                +program__sub-list('list-11')
+                            li.program__item 12.ООП Дополнение
+                                +program__sub-list('list-12')
+                            li.program__item 13.Построение RESTful API
+                                +program__sub-list('list-13')
+                            li.program__item 14.Модули. logging
+                                +program__sub-list('list-14')
+                            li.program__item 15.Реализуем финальный проект.
+                                +program__sub-list('list-15')
+
+
+

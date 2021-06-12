@@ -1,0 +1,29 @@
+.modal#auth-modal
+    a(href="#").modal__overlay
+    form(action="#", method="post").modal__form
+        h3.modal__title Вход в личный кабинет
+        a(href="#").modal__close
+        fieldset.modal__fieldset
+            input(type="email", name="email" placeholder="Введите e-mail" required).modal__input
+            input(type="password", name="password" placeholder="Введите пароль" required).modal__input
+            button(type="submit").modal__submit-btn Войти
+
+.modal#callback-modal
+    a(href="#").modal__overlay
+    form(action="#", method="post").modal__form
+        h3.modal__title Сообщить о выходе программы
+        a(href="#").modal__close
+        fieldset.modal__fieldset
+            input(type="text", name="text" placeholder="Введите имя" required).modal__input
+            input(type="email", name="email" placeholder="Введите e-mail" required).modal__input
+            button(type="submit").modal__submit-btn Отправить
+
+.modal#request-modal
+    a(href="#").modal__overlay
+    form(action="#", method="post").modal__form
+        h3.modal__title Отправить заявку
+        a(href="#").modal__close
+        fieldset.modal__fieldset
+            input(type="text", name="text" placeholder="Введите имя" required).modal__input
+            input(type="email", name="email" placeholder="Введите e-mail" required).modal__input
+            button(type="submit").modal__submit-btn Отправить

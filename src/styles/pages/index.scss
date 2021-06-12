@@ -1,0 +1,240 @@
+/* index styles - start */
+.logo__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: clamp(
+        30px,
+        calc(1.875rem + ((1vw - 3.2px) * 5.8929)),
+        96px
+    );
+
+    @include media-custom-max(469px) {
+        justify-content: center;
+    }
+}
+.cta {
+    background: radial-gradient(
+        circle at 4% -53%,
+        rgba(187, 187, 187, 0) 0%,
+        rgba(13, 66, 144, 0.9) 40%,
+        rgba(13, 66, 144, 0.9) 50%,
+        rgba(13, 66, 144, 0.9) 100%
+    );
+    padding-top: 20px;
+    padding-bottom: 48px;
+    border-radius: 0px 0px 100px 100px;
+
+    &__title {
+        font-weight: 700;
+        font-size: toRem(48);
+        font-size: clamp(
+            toRem(24),
+            calc(1.5rem + ((1vw - 3.2px) * 2.1429)),
+            toRem(48)
+        );
+        min-height: 0vw;
+        color: var(--white-color);
+        line-height: clamp(
+            35px,
+            calc(2.1875rem + ((1vw - 3.2px) * 2.0536)),
+            58px
+        );
+
+        @include media-custom-max(960px) {
+            text-align: center;
+        }
+    }
+}
+.comp-logo {
+    @include media-custom-max(469px) {
+        padding-bottom: 15px;
+    }
+}
+.adv {
+    &__nav {
+        padding-bottom: 40px;
+    }
+    &__row {
+        display: flex;
+        gap: 162px;
+        align-items: center;
+        padding-top: 40px;
+
+        @include media-custom-max(960px) {
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+        }
+    }
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        font-weight: 400;
+        font-size: toRem(18);
+        font-size: clamp(16px, calc(1rem + ((1vw - 3.2px) * 0.1786)), 18px);
+        min-height: 0vw;
+        line-height: 22px;
+        color: var(--white-color);
+    }
+    &__item {
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+    &__item::before {
+        content: "";
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--blue-color--light);
+        border-radius: 10px;
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+        background-size: 35px;
+    }
+    &__item-1::before {
+        background-image: url(../img/sprite/sprite.svg#adv-ico-1);
+    }
+    &__item-2::before {
+        background-image: url(../img/sprite/sprite.svg#adv-ico-2);
+    }
+    &__item-3::before {
+        background-image: url(../img/sprite/sprite.svg#adv-ico-3);
+    }
+    &__item-4::before {
+        background-image: url(../img/sprite/sprite.svg#adv-ico-4);
+    }
+    &__item-5::before {
+        background-image: url(../img/sprite/sprite.svg#adv-ico-5);
+    }
+}
+.callback-btn {
+    font-weight: 600;
+    color: black;
+    font-size: 1rem;
+    font-size: clamp(14px, calc(0.875rem + ((1vw - 3.2px) * 0.1786)), 16px);
+    min-height: 0vw;
+    border-radius: 10px;
+    background-color: var(--yellow-color);
+    text-decoration: none;
+    max-width: 300px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    @include media-custom-max(960px) {
+        margin: auto;
+    }
+}
+.program {
+    padding-top: 163px;
+
+    @include media-custom-max(960px) {
+        padding-top: 60px;
+    }
+
+    &__top {
+        background: var(--blue-color--darker)
+            url(../img/sprite/sprite.svg#program-bg) no-repeat top right/385px;
+        color: var(--white-color);
+        padding-top: 60px;
+        padding-left: 95px;
+        padding-right: 405px;
+        padding-bottom: 54px;
+        border-radius: 20px 20px 0px 0px;
+
+        @include media-custom-max(960px) {
+            padding: 30px;
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: toRem(24);
+        font-size: clamp(18px, calc(1.125rem + ((1vw - 3.2px) * 0.5357)), 24px);
+        min-height: 0vw;
+        line-height: 34px;
+    }
+    p {
+        font-weight: 400;
+        font-size: toRem(18);
+        font-size: clamp(16px, calc(1rem + ((1vw - 3.2px) * 0.1786)), 18px);
+        min-height: 0vw;
+        line-height: 26px;
+    }
+
+    &__bottom {
+        padding-top: 70px;
+        padding-left: 95px;
+
+        @include media-custom-max(960px) {
+            padding: 30px;
+        }
+
+        h4 {
+            font-weight: 400;
+            color: var(--secondary-color);
+            font-size: toRem(24);
+            font-size: clamp(
+                18px,
+                calc(1.125rem + ((1vw - 3.2px) * 0.5357)),
+                24px
+            );
+            min-height: 0vw;
+        }
+    }
+
+    &__list {
+        font-weight: 600;
+        font-size: 1rem;
+        font-size: clamp(14px, calc(0.875rem + ((1vw - 3.2px) * 0.1786)), 16px);
+        min-height: 0vw;
+        line-height: 24px;
+        color: var(--secondary-color);
+        padding-left: 20px;
+        padding-top: 30px;
+    }
+    &__item {
+        position: relative;
+        padding-bottom: 20px;
+        list-style: none;
+        padding-left: 10px;
+        padding-top: 20px;
+    }
+    &__item::after {
+        content: "";
+        background: url(../img/sprite/sprite.svg#arrow-top) no-repeat
+            center/cover;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: -15px;
+        top: 24px;
+        transform: rotate(180deg);
+        transition: transform var(--normal-transition);
+    }
+    &__link {
+        text-decoration: none;
+        color: var(--secondary-color);
+    }
+    &__sub-list {
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        list-style-type: disc;
+        font-weight: 400;
+        max-height: 0;
+        overflow: hidden;
+        transition: all var(--normal-transition);
+    }
+}
+.program__item._active::after {
+    transform: rotate(0);
+}
+.program__item._active > .program__sub-list {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: visible;
+}
+/* index styles - end */
