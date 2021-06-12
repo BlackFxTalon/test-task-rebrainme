@@ -1,13 +1,15 @@
-# ninji-frontend-template-2021
-
-my new template for frontend development in 2021 (gulp + webpack + sass + pug)
+# test-task-rebrainme
 
 Steps to start developing your new project with this template:
 <br>
-clone project - <code>git clone https://github.com/BlackFxTalon/ninji-frontend-template-2021</code>
+##clone project
+<code>git clone https://github.com/BlackFxTalon/ninji-frontend-template-2021</code>
 <br>
-install dependencies - <code>npm i</code>
+##install dependencies
+<code>npm i</code>
 <br>
-launch development - <code>gulp dev</code>
+##launch development
+<code>npm run dev</code>
 <br>
-launch production - <code>gulp build</code>
+##launch production
+<code>npm run build</code>
