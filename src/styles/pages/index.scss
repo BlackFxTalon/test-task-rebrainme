@@ -64,8 +64,14 @@
 
         @include media-custom-max(960px) {
             flex-wrap: wrap;
-            gap: 50px;
+            gap: 0;
             justify-content: center;
+        }
+    }
+
+    &__right-part {
+        @include media-custom-max(960px) {
+            padding-top: 50px;
         }
     }
     &__list {
