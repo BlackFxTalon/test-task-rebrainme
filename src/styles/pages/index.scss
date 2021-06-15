@@ -112,7 +112,7 @@
 }
 .callback-btn {
     font-weight: 600;
-    color: black;
+    color: rgb(214, 193, 193);
     font-size: 1rem;
     font-size: clamp(14px, calc(0.875rem + ((1vw - 3.2px) * 0.1786)), 16px);
     min-height: 0vw;
@@ -123,6 +123,15 @@
     padding: 20px;
     display: flex;
     justify-content: center;
+    transition: background-color var(--normal-transition),
+        color var(--normal-transition);
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--orange-color);
+        color: var(--yellow-color);
+    }
 
     @include media-custom-max(960px) {
         margin: auto;
