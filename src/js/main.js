@@ -2,8 +2,6 @@
 import "./import/blocks";
 import "./import/components";
 
-const modalBtn = document.querySelectorAll('.modal-btn');
-const body = document.querySelector('body');
 const authBtn = document.querySelector('.auth-btn');
 const modalOverlay = document.querySelector('.modal__overlay');
 const modalClose = document.querySelector('.modal__close');
@@ -18,19 +16,12 @@ modalOverlay.addEventListener('click', () => {
     if (authBtn.classList.contains('auth-btn--opened')) {
         authBtn.classList.remove('auth-btn--opened');
     }
-    body.classList.remove('no-scroll');
 })
 
 modalClose.addEventListener('click', () => {
     if (authBtn.classList.contains('auth-btn--opened')) {
         authBtn.classList.remove('auth-btn--opened');
     }
-    body.classList.remove('no-scroll');
-})
-modalBtn.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        body.classList.add('no-scroll');
-    })
 })
 
 programItem.forEach((item) => {
