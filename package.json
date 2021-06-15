@@ -4,7 +4,8 @@
     "description": "my new template for frontend development in 2021 (gulp + webpack + sass + pug)",
     "main": "gulpfile.js",
     "dependencies": {
-        "modern-normalize": "^0.6.0"
+        "modern-normalize": "^0.6.0",
+        "netlify-cli": "^3.37.25"
     },
     "devDependencies": {
         "@babel/cli": "^7.11.6",
