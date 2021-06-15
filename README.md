@@ -1,7 +1,5 @@
 # test-task-rebrainme
 
-Steps to start developing your new project with this template:
-
 ## site domain
 
 https://test-task-rebrainme.netlify.app
