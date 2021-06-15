@@ -210,6 +210,7 @@
         list-style: none;
         padding-left: 10px;
         padding-top: 20px;
+        display: inline-block;
     }
     &__item::after {
         content: "";
